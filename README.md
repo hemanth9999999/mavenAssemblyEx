@@ -67,7 +67,8 @@ Inside project tag :
   
   
   
-# inside assembly folder assembly.xml
+  assembly.xml
+  
   <assembly
 	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -105,7 +106,7 @@ Inside project tag :
 	</fileSets>
 </assembly>
 
-# assembly1.xml 
+assembly1.xml 
 
 <assembly
         xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
