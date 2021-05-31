@@ -1,0 +1,1 @@
+# mavenAssemblyEx
