@@ -1,7 +1,5 @@
-# mavenAssemblyEx
-
-Inside project tag : 
-
+# mavenAssemblyEx Inside project tag : 
+```
 <build>
 		<pluginManagement>
 			<plugins>
@@ -65,10 +63,11 @@ Inside project tag :
 		</plugins>
 	</build>
   
+  ```
   
+  #assembly.xml
   
-  assembly.xml
-  
+  ```
   <assembly
 	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -105,9 +104,10 @@ Inside project tag :
 		</fileSet>
 	</fileSets>
 </assembly>
+```
+# assembly1.xml 
 
-assembly1.xml 
-
+```
 <assembly
         xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -139,3 +139,4 @@ assembly1.xml
 		</fileSet>
 	</fileSets>
 </assembly>
+```
