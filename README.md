@@ -1,4 +1,5 @@
-# mavenAssemblyEx Inside project tag : 
+# mavenAssemblyEx 
+## Inside project tag : 
 ```
 <build>
 		<pluginManagement>
@@ -65,7 +66,7 @@
   
   ```
   
-  #assembly.xml
+  ## assembly.xml
   
   ```
   <assembly
@@ -105,7 +106,7 @@
 	</fileSets>
 </assembly>
 ```
-# assembly1.xml 
+## assembly1.xml 
 
 ```
 <assembly
