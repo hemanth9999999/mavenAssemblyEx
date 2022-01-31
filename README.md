@@ -1,3 +1,7 @@
+Cert examples 
+openssl pkcs12 -export -in domain_cert.txt -inkey privateKey.txt -certfile root_intermediary_certs.txt -out testkeystore.p12
+keytool -importkeystore -srckeystore testkeystore.p12 -srcstoretype pkcs12 -destkeystore test.jks -deststoretype JKS
+
 # mavenAssemblyEx 
 ## Inside project tag : 
 ```
