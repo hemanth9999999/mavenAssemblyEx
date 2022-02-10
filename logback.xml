@@ -9,8 +9,8 @@
 	<appender name="CSSPLUNK_APPENDER" class="com.splunk.logging.HttpEventCollectorLogbackAppender">
 		<url>${splunk.url}</url>
        <token>${splunk.token}</token>
-       <index>200004083_cstone_idx3</index>
-       <source>200004083_cstone_idx3</source>
+       <index>some_idx3</index>
+       <source>some_idx3</source>
        <sourcetype>csrt:epaas:queryservice</sourcetype>
        <disableCertificateValidation>true</disableCertificateValidation>
         <batch_size_count>1</batch_size_count>
