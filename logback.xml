@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		Log message format
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="com.csrt.logging.layouts.SplunkLogbackLayout" />
+		</encoder>
+	</appender>
+	<appender name="CSSPLUNK_APPENDER" class="com.splunk.logging.HttpEventCollectorLogbackAppender">
+		<url>${splunk.url}</url>
+       <token>${splunk.token}</token>
+       <index>200004083_cstone_idx3</index>
+       <source>200004083_cstone_idx3</source>
+       <sourcetype>csrt:epaas:queryservice</sourcetype>
+       <disableCertificateValidation>true</disableCertificateValidation>
+        <batch_size_count>1</batch_size_count>
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="com.csrt.logging.layouts.SplunkLogbackLayout"/>
+		</encoder>
+    </appender>
+	<appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+	    <appender-ref ref="STDOUT" />
+	    <neverBlock>true</neverBlock>
+   </appender>
+    <appender name="ASYNCSPLUNK" class="ch.qos.logback.classic.AsyncAppender">
+	    <appender-ref ref="CSSPLUNK_APPENDER" />
+	    <neverBlock>true</neverBlock>
+   </appender>
+
+	<!-- Setting the root level of logging to info -->
+	<root level="${log.level}">
+		<appender-ref ref="ASYNC" />
+	</root>
+	<root level="info">
+		<appender-ref ref="ASYNCSPLUNK" />
+	</root>
+	<logger name="io.vertx.ext.web" level="info" />
+	<logger name="io.vertx" level="info" />
+	<logger name="io.netty.util.internal.PlatformDependent" level="info" />
+	<logger name="com.csrt.qs.cb" level="${log.level}" />
+	
+</configuration>
